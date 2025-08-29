@@ -1,0 +1,56 @@
+/* Asegura que todo el documento mida la pantalla completa */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo con la imagen (usa tu nombre exacto: /backgroud.png) */
+body {
+  background: url('/backgroud.png') center center / cover no-repeat fixed !important;
+  background-color: transparent !important;
+}
+
+/* Quita cualquier color sólido del contenedor principal */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: transparent !important; /* <- clave para “matar” el rojo */
+}
+
+/* Resto de tus estilos originales */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover { filter: drop-shadow(0 0 2em #646cffaa); }
+.logo.react:hover { filter: drop-shadow(0 0 2em #61dafbaa); }
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
+.nombre-usuario {
+  background: rgba(255, 255, 255, 0.2); /* caja translúcida */
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: #fff;
+}
